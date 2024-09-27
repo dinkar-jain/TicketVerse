@@ -59,10 +59,10 @@ const SeatSelectionModal: React.FC<SeatSelectionModalProps> = ({ ticketVerseCont
         <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
             <div className="bg-white text-black rounded-lg p-8 w-11/12 max-w-4xl shadow-2xl">
                 <div className="mb-6">
-                    <h2 className="text-3xl font-bold mb-4 text-indigo-600">Select Seats for {event.name}</h2>
+                    <h2 className="text-2xl font-bold mb-4 text-gray-900">Select Seats for {event.name}</h2>
                     <div className="flex flex-col sm:flex-row justify-between items-center mb-6">
-                        <p className="text-lg text-gray-600">{new Date(event.date).toLocaleDateString()}</p>
-                        <p className="text-lg text-gray-600">{event.location}</p>
+                        <p className="text-sm text-gray-600">{new Date(event.date).toLocaleDateString()}</p>
+                        <p className="text-sm text-gray-600">{event.location}</p>
                     </div>
                 </div>
                 <div className="relative overflow-hidden p-5 bg-gray-200 rounded-lg mb-6">
@@ -75,8 +75,8 @@ const SeatSelectionModal: React.FC<SeatSelectionModalProps> = ({ ticketVerseCont
                                         key={seatIndex}
                                         className={`p-3 rounded-lg transition duration-200 shadow-sm 
                                             ${bookedSeatsList.includes(seat) ? 'bg-gray-400 text-gray-600 cursor-not-allowed' :
-                                                selectedSeat === seat ? 'bg-indigo-500 text-white' :
-                                                    'bg-gray-300 text-gray-700 hover:bg-indigo-500 hover:text-white'
+                                                selectedSeat === seat ? 'bg-gray-900 text-white' :
+                                                    'bg-gray-300 text-gray-700 hover:bg-gray-900 hover:text-white'
                                             }`}
                                         onClick={() => setSelectedSeat(seat)}
                                         disabled={bookedSeatsList.includes(seat)}
@@ -92,14 +92,14 @@ const SeatSelectionModal: React.FC<SeatSelectionModalProps> = ({ ticketVerseCont
                 <div className="flex justify-between">
                     <button
                         onClick={() => handleSeatSelection(selectedSeat as string)}
-                        className={`${selectedSeat ? 'bg-indigo-500 hover:bg-indigo-600' : 'bg-gray-400 cursor-not-allowed'} text-white px-4 py-2 rounded-lg transition duration-200`}
+                        className={`${selectedSeat ? 'bg-gray-900 hover:bg-gray-800' : 'bg-gray-400 cursor-not-allowed'} text-white px-4 py-2 rounded-lg transition duration-200`}
                         disabled={!selectedSeat}
                     >
                         Book Seat
                     </button>
                     <button
                         onClick={onClose}
-                        className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition duration-200"
+                        className="bg-gray-200 text-gray-800 px-4 py-2 rounded hover:bg-gray-300 transition duration-200"
                     >
                         Close
                     </button>
