@@ -62,12 +62,10 @@ export default function LandingPage(props: { connectMetaMask: () => void; }) {
                         <AnimatedSection className="flex flex-col items-center space-y-4 text-center">
                             <div className="space-y-2">
                                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl text-gray-900">
-                                    Welcome to the Future of Event Ticketing
+                                    Event Tickets, Transformed: Own NFTs!
                                 </h1>
                                 <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl">
-                                    TicketVerse revolutionizes event ticketing with NFT technology. Secure, transferable, and
-                                    unforgettable experiences await.
-                                </p>
+                                    Prepare for instant access to events with our secure NFT tickets, ensuring every experience is memorable and uniquely yours!                                </p>
                             </div>
                             <div className="space-x-4">
                                 <button onClick={props.connectMetaMask} className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-gray-900 text-white hover:bg-gray-800 h-10 py-2 px-4">
